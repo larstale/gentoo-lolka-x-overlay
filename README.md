@@ -20,10 +20,10 @@ emaint sync -r gentoo-lolka-x-overlay
 Добавьте размаскировку версии `9999`, примите лицензию и отключите `network-sandbox` для этого пакета (чтобы `src_unpack` мог скачать актуальный RPM):
 
 ```bash
+mkdir -p /etc/portage/package.license /etc/portage/env /etc/portage/package.env /etc/portage/package.accept_keywords
+
 echo "net-im/lolka-x-bin **" >> /etc/portage/package.accept_keywords/lolka-x
 echo "net-im/lolka-x-bin all-rights-reserved" >> /etc/portage/package.license/lolka-x
-
-mkdir -p /etc/portage/env /etc/portage/package.env
 echo 'FEATURES="-network-sandbox"' > /etc/portage/env/no-network-sandbox.conf
 echo 'net-im/lolka-x-bin no-network-sandbox.conf' > /etc/portage/package.env/lolka-x
 ```
