@@ -1,0 +1,15 @@
+BDEPEND=net-misc/curl || ( app-arch/rpm2targz >=app-arch/rpm-4.19.0[lzma(+)] )
+DEFINED_PHASES=install postinst postrm preinst unpack
+DESCRIPTION=Native desktop client for lolka.app - chat and voice with friends
+EAPI=8
+HOMEPAGE=https://lolka.app
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=desktop rpm xdg
+IUSE=gtk
+LICENSE=all-rights-reserved
+PROPERTIES=live
+RDEPEND=app-crypt/mit-krb5 dev-libs/glib:2 dev-libs/openssl:= elibc_glibc? ( sys-libs/glibc ) media-libs/fontconfig media-libs/freetype media-libs/libglvnd[X] media-libs/libpulse media-libs/libva media-libs/mesa media-video/pipewire media-video/wireplumber sys-apps/dbus sys-apps/xdg-desktop-portal sys-devel/gcc:* virtual/zlib:= x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXi x11-libs/libXrandr x11-libs/libXtst x11-libs/libxkbcommon[X] x11-libs/xcb-util-cursor x11-libs/xcb-util-image x11-libs/xcb-util-keysyms x11-libs/xcb-util-renderutil x11-libs/xcb-util-wm x11-misc/xdg-utils x11-themes/hicolor-icon-theme gtk? ( x11-libs/gtk+:3 )
+RESTRICT=bindist mirror strip
+SLOT=0
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	estack	c61c368a76fdf3a82fdf8dbaebea3804	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	rpm	716d8645cb3f94e78951eda6c33e0546	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	xdg	3ef49a87c52c8b77c476351195dfe575
+_md5_=f082d530ba90f3134399e646945f349c
